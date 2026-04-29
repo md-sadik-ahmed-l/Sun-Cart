@@ -7,7 +7,7 @@ import Twitter from "../assets/img/Twitter.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#101727] text-white px-5 md:px-10 lg:px-20 py-12">
+    <footer className="bg-[#101727] text-white px-5 md:px-10 lg:px-20 py-8">
       <div className="max-w-7xl mx-auto">
 
         
@@ -88,7 +88,7 @@ const Footer = () => {
         </div>
 
         
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-12 pt-6 border-t border-gray-700 text-gray-400 gap-4">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-7 pt-3 border-t border-gray-700 text-gray-400 gap-4">
 
           <p className="text-sm md:text-base">
             © 2026 SunCart. All rights reserved.
