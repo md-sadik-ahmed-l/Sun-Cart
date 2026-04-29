@@ -14,14 +14,18 @@ const HomePage = async () => {
 
       <div className="container mx-auto">
         <h1 className="font-bold text-4xl mt-10 mb-5">Top Products</h1>
+
         <div className="grid grid-cols-4 gap-5">
+
           {topProduct.map((product) => (
             <ProductsCard key={product.id} product={product}></ProductsCard>
           ))}
+          
         </div>
+
         <div className="flex justify-center items-center ">
           <Link
-            href={"/all-photos"}
+            href={"/products"}
             className="border mt-10 text-xl font-medium py-3 px-9 rounded-full shadow-md bg-linear-to-r from-pink-500 via-purple-500 bg-red-500 text-white"
           >
             All Products

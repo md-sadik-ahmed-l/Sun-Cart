@@ -3,18 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaHeart } from "react-icons/fa";
-import { BiDownload } from "react-icons/bi";
+import { BiDollar, BiStar } from "react-icons/bi";
 
 const ProductsCard = ({ product }) => {
   return (
     <div>
-      <Card className="border rounded-xl">
+      <Card className="border rounded-xl max-w-85">
         <div className="relative w-full aspect-square">
           <Image
-            src={product.imageUrl || "/no-image-placeholder.png"}
+            src={product.image || "/no-image-placeholder.png"}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            alt={product.title}
+            alt={product.name}
             className="object-cover rounded-xl"
           />
 
@@ -24,33 +24,41 @@ const ProductsCard = ({ product }) => {
         </div>
 
         <div>
-          <h2 className="font-medium text-xl">{product.title}</h2>
+          <h2 className="font-medium text-2xl">{product.name}</h2>
         </div>
 
-        <div className="flex gap-5">
+        <div className="">
           <div className="flex items-center gap-2">
             <p>
               <FaHeart />
             </p>
-            <p>{product.likes}</p>
+            <p>{product.brand}</p>
           </div>
 
           <Separator orientation="vertical" />
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-between">
 
-            <p>
-              <BiDownload />
-            </p>
+            <div className="flex items-center text-2xl">
+              <p>
+                <BiDollar />
+              </p>
 
-            <p>{product.downloads}</p>
+              <p>{product.price}</p>
+            </div>
+
+           <div className="flex items-center gap-1">
+            <BiStar></BiStar>
+             <p>{product.rating}</p>
+           </div>
+            
           </div>
         </div>
 
-        <Link href={`/all-photos/${product.id}`} className="py-2 ">
-          {" "}
+        <Link href={`/products/${product.id}`} className="py-2 ">
+          
           <Button variant="outline" className="w-full text-xl shadow-sm">
-            View
+            View Details
           </Button>
         </Link>
       </Card>
