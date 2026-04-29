@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://i.postimg.cc/1X1/sunglasses.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Hawaiian Beach Shirt",
+    "brand": "Tropical Vibes",
+    "price": 22,
+    "rating": 4.5,
+    "stock": 20,
+    "description": "Colorful Hawaiian shirt ideal for beach wear.",
+    "image": "https://i.postimg.cc/1X2/shirt.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "SPF 50 Sunscreen",
+    "brand": "SunProtect",
+    "price": 12,
+    "rating": 4.8,
+    "stock": 30,
+    "description": "High protection sunscreen for long sunny days.",
+    "image": "https://i.postimg.cc/1X3/sunscreen.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 4,
+    "name": "Beach Straw Hat",
+    "brand": "SunnyStyle",
+    "price": 18,
+    "rating": 4.6,
+    "stock": 15,
+    "description": "Lightweight straw hat for sun protection.",
+    "image": "https://i.postimg.cc/1X4/hat.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 5,
+    "name": "Flip Flops",
+    "brand": "WalkCool",
+    "price": 10,
+    "rating": 4.3,
+    "stock": 40,
+    "description": "Comfortable flip flops for daily summer use.",
+    "image": "https://i.postimg.cc/1X5/flips.png",
+    "category": "Footwear"
+  },
+  {
+    "id": 6,
+    "name": "Beach Tote Bag",
+    "brand": "CarryCo",
+    "price": 20,
+    "rating": 4.4,
+    "stock": 18,
+    "description": "Spacious tote bag for beach essentials.",
+    "image": "https://i.postimg.cc/1X6/bag.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 7,
+    "name": "Aloe Vera Gel",
+    "brand": "NatureGlow",
+    "price": 9,
+    "rating": 4.7,
+    "stock": 25,
+    "description": "Cooling gel for soothing sunburn.",
+    "image": "https://i.postimg.cc/1X7/aloe.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 8,
+    "name": "Swim Shorts",
+    "brand": "WaveWear",
+    "price": 16,
+    "rating": 4.5,
+    "stock": 22,
+    "description": "Quick-dry swim shorts for beach fun.",
+    "image": "https://i.postimg.cc/1X8/shorts.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 9,
+    "name": "Portable Mini Fan",
+    "brand": "CoolTech",
+    "price": 14,
+    "rating": 4.6,
+    "stock": 35,
+    "description": "Handheld fan for staying cool outdoors.",
+    "image": "https://i.postimg.cc/1X9/fan.png",
+    "category": "Gadgets"
+  },
+  {
+    "id": 10,
+    "name": "Water Bottle (Insulated)",
+    "brand": "HydroMax",
+    "price": 13,
+    "rating": 4.8,
+    "stock": 28,
+    "description": "Keeps your drinks cold for hours.",
+    "image": "https://i.postimg.cc/1X10/bottle.png",
+    "category": "Essentials"
+  },
+  {
+    "id": 11,
+    "name": "Beach Umbrella",
+    "brand": "ShadePro",
+    "price": 30,
+    "rating": 4.6,
+    "stock": 12,
+    "description": "Large umbrella for sun protection at beach.",
+    "image": "https://i.postimg.cc/1X11/umbrella.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 12,
+    "name": "Cooling Towel",
+    "brand": "ChillWrap",
+    "price": 8,
+    "rating": 4.4,
+    "stock": 50,
+    "description": "Instant cooling towel for hot weather.",
+    "image": "https://i.postimg.cc/1X12/towel.png",
+    "category": "Essentials"
+  },
+  {
+    "id": 13,
+    "name": "Sunscreen Spray SPF 30",
+    "brand": "SunMist",
+    "price": 11,
+    "rating": 4.5,
+    "stock": 27,
+    "description": "Easy-to-use spray sunscreen.",
+    "image": "https://i.postimg.cc/1X13/spray.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 14,
+    "name": "Beach Ball",
+    "brand": "FunZone",
+    "price": 6,
+    "rating": 4.2,
+    "stock": 60,
+    "description": "Colorful beach ball for summer games.",
+    "image": "https://i.postimg.cc/1X14/ball.png",
+    "category": "Toys"
+  },
+  {
+    "id": 15,
+    "name": "Kids Swim Float",
+    "brand": "AquaFun",
+    "price": 12,
+    "rating": 4.6,
+    "stock": 19,
+    "description": "Safe and fun float for kids.",
+    "image": "https://i.postimg.cc/1X15/float.png",
+    "category": "Toys"
+  },
+  {
+    "id": 16,
+    "name": "Summer Dress",
+    "brand": "BreezyWear",
+    "price": 25,
+    "rating": 4.7,
+    "stock": 14,
+    "description": "Lightweight and stylish summer dress.",
+    "image": "https://i.postimg.cc/1X16/dress.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 17,
+    "name": "Men's Tank Top",
+    "brand": "UrbanCool",
+    "price": 14,
+    "rating": 4.4,
+    "stock": 26,
+    "description": "Breathable tank top for hot days.",
+    "image": "https://i.postimg.cc/1X17/tank.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 18,
+    "name": "Beach Sandals",
+    "brand": "StepEasy",
+    "price": 17,
+    "rating": 4.5,
+    "stock": 21,
+    "description": "Comfortable sandals for beach walking.",
+    "image": "https://i.postimg.cc/1X18/sandals.png",
+    "category": "Footwear"
+  },
+  {
+    "id": 19,
+    "name": "After Sun Lotion",
+    "brand": "SkinCare+",
+    "price": 13,
+    "rating": 4.6,
+    "stock": 24,
+    "description": "Hydrates and repairs sun-exposed skin.",
+    "image": "https://i.postimg.cc/1X19/lotion.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 20,
+    "name": "Travel Picnic Mat",
+    "brand": "OutdoorLife",
+    "price": 19,
+    "rating": 4.5,
+    "stock": 16,
+    "description": "Foldable mat for beach and picnic use.",
+    "image": "https://i.postimg.cc/1X20/mat.png",
+    "category": "Essentials"
+  }
+]
