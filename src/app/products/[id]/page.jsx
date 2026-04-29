@@ -51,7 +51,7 @@ const DetailsPage = async ({ params }) => {
             ${product?.price}
           </span>
           <span className="line-through text-gray-400">$30</span>
-          <span className="text-red-500">50% OFF</span>
+          <span className="text-red-500 text-2xl">50% OFF</span>
         </div>
 
         <p className="text-gray-600 mb-4">{product?.description}</p>
