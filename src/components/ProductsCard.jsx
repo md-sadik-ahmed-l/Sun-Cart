@@ -8,8 +8,10 @@ import { BiDollar, BiStar } from "react-icons/bi";
 const ProductsCard = ({ product }) => {
   return (
     <div>
-      <Card className="border rounded-xl max-w-85">
-        <div className="relative w-full aspect-square">
+      <Card className="border ml-2 rounded-xl  max-w-85 ">
+
+        <div className="relative w-full  aspect-square">
+
           <Image
             src={product.image || "/no-image-placeholder.png"}
             fill
@@ -19,8 +21,11 @@ const ProductsCard = ({ product }) => {
           />
 
           <Chip size="sm" className="absolute right-2 top-2">
+
             {product.category}
+
           </Chip>
+
         </div>
 
         <div>

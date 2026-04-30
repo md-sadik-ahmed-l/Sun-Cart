@@ -25,13 +25,13 @@ const Hero = () => {
              </div>
 
             <div className="flex items-end-safe gap-2 sm:gap-4">
-              <Link href="#">
+              <Link href="/products">
                 <Button className="bg-linear-to-r from-pink-500 via-purple-500 bg-red-500">
                   Shop Now
                 </Button>
               </Link>
 
-              <Link href="/pricing">
+              <Link href="/products">
                 <Button variant="outline" className="text-white">
                   View Products
                 </Button>

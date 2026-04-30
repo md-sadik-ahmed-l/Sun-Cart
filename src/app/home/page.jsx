@@ -15,7 +15,7 @@ const HomePage = async () => {
       <div className="container mx-auto">
         <h1 className="font-bold text-4xl mt-10 mb-5">Top Products</h1>
 
-        <div className="grid grid-cols-4 gap-5">
+        <div className="flex flex-wrap justify-center gap-5 sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
           {topProduct.map((product) => (
             <ProductsCard key={product.id} product={product}></ProductsCard>

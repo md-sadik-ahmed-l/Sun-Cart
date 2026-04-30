@@ -38,10 +38,10 @@ export default function SignInPage() {
 
 
   return (
-    <Card className="border mx-auto w-125 py-10 mt-5">
+    <Card className="border mx-auto w-65 sm:w-115 py-10 my-10 mx-2">
       <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+      <Form className="flex w-56 sm:w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField
           isRequired
           name="email"
@@ -99,7 +99,7 @@ export default function SignInPage() {
 
       <p className="text-center">Or</p>
 
-      <Button onClick={handlGoogleSignIn} variant="outline" className={'w-full'}><GrGoogle/> Sign In With Google</Button>
+      <Button onClick={handlGoogleSignIn} variant="outline" className='w-56 sm:w-full'><GrGoogle/> Sign In With Google</Button>
     </Card>
   );
 }
