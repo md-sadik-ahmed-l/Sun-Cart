@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="bg-[url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center  shadow-2xl mt-10">
+    <div className="bg-[url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center  shadow-2xl ">
       <div className="w-full h-full rounded-lg bg-black/50 flex items-center ">
         <div className="max-w-7xl mx-auto px-6 text-white">
 
@@ -24,7 +24,7 @@ const Hero = () => {
 
              </div>
 
-            <div className="flex items-end-safe gap-4">
+            <div className="flex items-end-safe gap-2 sm:gap-4">
               <Link href="#">
                 <Button className="bg-linear-to-r from-pink-500 via-purple-500 bg-red-500">
                   Shop Now
