@@ -8,10 +8,10 @@ const Navbar = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
 
-  const handlSignOut = async () =>{
+  const handlSignOut = async () => {
     await authClient.signOut();
-  }
- 
+  };
+
   const links = (
     <>
       <li>
@@ -20,9 +20,6 @@ const Navbar = () => {
 
       <li>
         <Link href={"/products"}>Products</Link>
-      </li>
-      <li>
-        <Link href={"/profile"}>Profile</Link>
       </li>
     </>
   );
@@ -85,17 +82,21 @@ const Navbar = () => {
           )}
 
           {user && (
-            <div className="flex gap-3">
-              <Avatar>
-              <Avatar.Image
-                alt="John Doe"
-                src={user?.image}
-                referrerPolicy="no-referrer"
-              />
-              <Avatar.Fallback>{user?.name[ 0]}</Avatar.Fallback>
-            </Avatar>
-            
-            <Button onClick={handlSignOut} variant="danger">Sign Out</Button>
+            <div className="hidden sm:flex gap-3">
+              <Link href={"/profile"}>
+                <Avatar>
+                  <Avatar.Image
+                    alt="John Doe"
+                    src={user?.image}
+                    referrerPolicy="no-referrer"
+                  />
+                  <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+                </Avatar>
+              </Link>
+
+              <Button onClick={handlSignOut} variant="danger">
+                Sign Out
+              </Button>
             </div>
           )}
         </div>
