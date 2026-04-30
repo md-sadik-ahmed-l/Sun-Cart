@@ -1,14 +1,23 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
+import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
+
+  const handlSignOut = async () =>{
+    await authClient.signOut();
+  }
+ 
   const links = (
     <>
       <li>
         <Link href={"/"}>Home</Link>
       </li>
-      
+
       <li>
         <Link href={"/products"}>Products</Link>
       </li>
@@ -48,32 +57,47 @@ const Navbar = () => {
           </div>
           <div className="flex">
             <Image
-            src={"/logo.png"}
-            alt="logo"
-            loading="eager"
-            width={40}
-            height={40}
-            className="object-cover h-auto w-auto"
-          />
-          <a className="btn btn-ghost text-3xl">SunCart</a>
+              src={"/logo.png"}
+              alt="logo"
+              loading="eager"
+              width={40}
+              height={40}
+              className="object-cover h-auto w-auto"
+            />
+            <a className="btn btn-ghost text-3xl">SunCart</a>
           </div>
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {links}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
 
         <div className="navbar-end">
-          <ul className="flex items-center text-[16px]  sm:text-xl gap-4">
-            <li>
-              <Link href={"/signup"}>SignUp</Link>
-            </li>
-            <li>
-              <Link href={"/signin"}>SignIn</Link>
-            </li>
-          </ul>
+          {!user && (
+            <ul className="flex items-center text-[16px]  sm:text-xl gap-4">
+              <li>
+                <Link href={"/signup"}>SignUp</Link>
+              </li>
+              <li>
+                <Link href={"/signin"}>SignIn</Link>
+              </li>
+            </ul>
+          )}
+
+          {user && (
+            <div className="flex gap-3">
+              <Avatar>
+              <Avatar.Image
+                alt="John Doe"
+                src={user?.image}
+                referrerPolicy="no-referrer"
+              />
+              <Avatar.Fallback>{user?.name[ 0]}</Avatar.Fallback>
+            </Avatar>
+            
+            <Button onClick={handlSignOut} variant="danger">Sign Out</Button>
+            </div>
+          )}
         </div>
       </div>
     </div>

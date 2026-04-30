@@ -26,7 +26,7 @@ const HomePage = async () => {
         <div className="flex justify-center items-center ">
           <Link
             href={"/products"}
-            className="border mt-10 text-xl font-medium py-3 px-9 rounded-full shadow-md bg-linear-to-r from-pink-500 via-purple-500 bg-red-500 text-white"
+            className="border my-5 mt-10 text-xl font-medium py-3 px-9 rounded-full shadow-md bg-linear-to-r from-pink-500 via-purple-500 bg-red-500 text-white"
           >
             All Products
           </Link>
