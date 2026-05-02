@@ -1,6 +1,7 @@
+"use client";
 
 export const dynamic = "force-dynamic";
-"use client";
+
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
@@ -15,13 +16,13 @@ import {
 } from "@heroui/react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 
 import { GrGoogle } from "react-icons/gr";
 import { toast } from "react-toastify";
 
 
-export default function SignInPage() {
+function SignInContent() {
 
   const searchParams = useSearchParams()
 
@@ -144,3 +145,12 @@ export default function SignInPage() {
     </Card>
   );
 }
+
+export default function SignInPage() {
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+      <SignInContent />
+    </Suspense>
+  );
+}
+
