@@ -38,7 +38,7 @@ export default function SignInPage() {
 
 
   return (
-    <Card className="border mx-auto w-65 sm:w-115 py-10 my-10 mx-2">
+    <Card className="border mx-auto w-65 sm:w-115 py-10 my-10 md:my-20">
       <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
       <Form className="flex w-56 sm:w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>

@@ -1,3 +1,21 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
 @plugin "daisyui";
+
+@theme {
+  --color-sun-yellow: #FFC107;
+  --color-sun-yellow-hover: #FFA000;
+  --color-sun-dark: #001F3F;
+  --color-sun-light: #E3F2FD;
+  --color-sun-blue-deep: #1A365D;
+}
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #333333;
+}

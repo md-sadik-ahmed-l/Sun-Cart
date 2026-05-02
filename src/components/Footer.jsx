@@ -1,121 +1,109 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-
-import Facebook from "../assets/img/Facebook.png";
-import Instagram from "../assets/img/Instagram.png";
-import Twitter from "../assets/img/Twitter.png";
+import { FaFacebook, FaInstagram, FaTwitter, FaPinterest } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Footer = () => {
+  const socialLinks = [
+    { icon: <FaFacebook size={20} />, href: "#" },
+    { icon: <FaInstagram size={20} />, href: "#" },
+    { icon: <FaTwitter size={20} />, href: "#" },
+    { icon: <FaPinterest size={20} />, href: "#" },
+  ];
+
   return (
-    <footer className="bg-[#101727] text-white px-5 md:px-10 lg:px-20 py-8">
-      <div className="max-w-7xl mx-auto">
-
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
-         
-          <div className="space-y-3">
-            <h2 className="font-bold text-3xl md:text-4xl">SunCart</h2>
-            <p className="text-gray-300 text-sm md:text-base">
-              Build amazing experiences with our modern app platform.
+    <motion.footer 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+      className="bg-sun-dark text-white pt-24 pb-12"
+    >
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+          
+          <div className="space-y-8">
+            <Link href="/" className="flex items-center gap-3 group">
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 1 }}
+              >
+                <Image
+                  src={"/logo.png"}
+                  alt="logo"
+                  width={40}
+                  height={40}
+                  className="invert brightness-0"
+                />
+              </motion.div>
+              <h2 className="font-black text-4xl tracking-tight group-hover:text-sun-yellow transition-colors duration-300">
+                SunCart
+              </h2>
+            </Link>
+            <p className="text-gray-400 text-lg leading-relaxed max-w-xs">
+              Your premium destination for summer essentials. We bring the sunshine to your doorstep.
             </p>
           </div>
 
-         
-          <div className="space-y-3">
-            <h4 className="text-lg md:text-xl font-medium">Company</h4>
-            <ul className="space-y-2 text-gray-300 text-sm md:text-base">
-              <li>
-                <Link href="/about" className="hover:text-white">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/features" className="hover:text-white">
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="hover:text-white">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/templates" className="hover:text-white">
-                  Templates
-                </Link>
-              </li>
+          
+          <div className="space-y-8">
+            <h4 className="text-xl font-bold text-white uppercase tracking-widest">Explore</h4>
+            <ul className="space-y-4 text-gray-400 text-lg">
+              {["Home", "Products", "My Profile"].map((link) => (
+                <li key={link}>
+                  <Link href={`/${link.toLowerCase().replace(" ", "")}`} className="hover:text-sun-yellow hover:translate-x-2 inline-block transition-all duration-300">
+                    {link}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           
-          <div className="space-y-3">
-            <h4 className="text-lg md:text-xl font-medium">Resources</h4>
-            <ul className="space-y-2 text-gray-300 text-sm md:text-base">
-              <li>
-                <Link href="/docs" className="hover:text-white">
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link href="/help" className="hover:text-white">
-                  Help Center
-                </Link>
-              </li>
-              <li>
-                <Link href="/community" className="hover:text-white">
-                  Community
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white">
-                  Contact
-                </Link>
-              </li>
+          <div className="space-y-8">
+            <h4 className="text-xl font-bold text-white uppercase tracking-widest">Support</h4>
+            <ul className="space-y-4 text-gray-400 text-lg">
+              {["Contact Us", "Shipping Policy", "Privacy Policy"].map((link) => (
+                <li key={link}>
+                  <Link href="#" className="hover:text-sun-yellow hover:translate-x-2 inline-block transition-all duration-300">
+                    {link}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          
-          <div className="space-y-3">
-            <h4 className="text-lg md:text-xl font-medium">Social Links</h4>
-            <div className="flex space-x-4">
-              <Image src={Facebook} alt="Facebook" className="w-8 h-8 hover:scale-110 transition" />
-              <Image src={Instagram} alt="Instagram" className="w-8 h-8 hover:scale-110 transition" />
-              <Image src={Twitter} alt="Twitter" className="w-8 h-8 hover:scale-110 transition" />
+          {/* Follow Us */}
+          <div className="space-y-8">
+            <h4 className="text-xl font-bold text-white uppercase tracking-widest">Join the Club</h4>
+            <div className="flex gap-5">
+              {socialLinks.map((social, index) => (
+                <motion.a 
+                  key={index}
+                  href={social.href}
+                  whileHover={{ y: -5, rotate: 10, backgroundColor: "#FFC107", color: "#001F3F" }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center transition-all duration-300"
+                >
+                  {social.icon}
+                </motion.a>
+              ))}
             </div>
+            <p className="text-gray-500 text-sm">Stay updated with our latest summer drops.</p>
           </div>
-
         </div>
 
-        
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-7 pt-3 border-t border-gray-700 text-gray-400 gap-4">
-
-          <p className="text-sm md:text-base">
-            © 2026 SunCart. All rights reserved.
-          </p>
-
-          <ul className="flex flex-wrap gap-4 text-sm md:text-base">
-            <li>
-              <Link href="/privacy" className="hover:text-white">
-                Privacy Policy
-              </Link>
-            </li>
-            <li>
-              <Link href="/terms" className="hover:text-white">
-                Terms of Service
-              </Link>
-            </li>
-            <li>
-              <Link href="/cookies" className="hover:text-white">
-                Cookies
-              </Link>
-            </li>
-          </ul>
-
+        {/* Bottom Bar */}
+        <div className="pt-10 border-t border-white/50 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500 uppercase tracking-[0.2em] font-black">
+          <p>© 2026 SUNCART. CRAFTED FOR SUMMER.</p>
+          <div className="flex gap-10">
+            <Link href="/privacy" className="hover:text-white transition-colors duration-300">Privacy</Link>
+            <Link href="/terms" className="hover:text-white transition-colors duration-300">Terms</Link>
+          </div>
         </div>
-
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
