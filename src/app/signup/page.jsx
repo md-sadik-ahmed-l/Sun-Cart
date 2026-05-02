@@ -11,6 +11,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
 
@@ -127,8 +128,9 @@ export default function SignUpPage() {
         variant="outline"
         className=" w-55 sm:w-full"
       >
-        <GrGoogle /> Sign In With Google
+        <GrGoogle /> Sign Up With Google
       </Button>
+       <Link href={"/signin"}><Button variant="outline" className=' w-56 sm:w-full'> I already have an account</Button></Link>
     </Card>
   );
 }

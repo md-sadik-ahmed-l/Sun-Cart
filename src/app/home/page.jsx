@@ -8,7 +8,7 @@ import Link from "next/link";
 const HomePage = async () => {
   let products = [];
   try {
-    const res = await fetch("https://sun-cart-gold.vercel.app/data.json", { cache: 'no-store' });
+    const res = await fetch("https://sun-cart-gold.vercel.app/data.json");
     products = await res.json();
   } catch (error) {
     console.error("Failed to fetch products:", error);
