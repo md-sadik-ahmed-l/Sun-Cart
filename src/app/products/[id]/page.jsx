@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaStar } from "react-icons/fa6";
 
 const DetailsPage = async ({ params }) => {
   const { id } = await params;
@@ -42,8 +43,8 @@ const DetailsPage = async ({ params }) => {
         <h1 className="text-2xl font-bold">{product?.name}</h1>
         <p className="text-gray-500">{product?.brand}</p>
 
-        <p className="text-yellow-500 my-2">
-          ⭐ {product?.rating} (120 Reviews)
+        <p className="text-yellow-500 my-2 flex items-center">
+          <FaStar></FaStar> {product?.rating} (120 Reviews)
         </p>
 
         <div className="flex items-center gap-3 my-3">
@@ -57,9 +58,9 @@ const DetailsPage = async ({ params }) => {
         <p className="text-gray-600 mb-4">{product?.description}</p>
 
         <div className="space-y-2 text-sm mb-4">
-          <p>📦 Category: {product?.category}</p>
+          <p>Category: {product?.category}</p>
           <p className="text-green-600">✔ {product?.stock} in stock</p>
-          <p>🏷 Brand: {product?.brand}</p>
+          <p>Brand: {product?.brand}</p>
         </div>
 
         <div className="flex items-center gap-3 mb-6">

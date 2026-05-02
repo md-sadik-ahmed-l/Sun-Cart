@@ -14,6 +14,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 export default function SignUpPage() {
   const router = useRouter();
@@ -33,18 +34,24 @@ export default function SignUpPage() {
       image,
     });
 
-    
+    if (error) {
+      toast.error(error.message || "Login failed");
 
-    if (!error) {
+    } else {
+      
+      
+      toast.success("Login Success");
       router.push("/");
-    }
+      }
+
   };
   const handlGoogleSignUp = async () => {
-      const {data, error} = await authClient.signUp.social({
+      const {data, error} = await authClient.signIn.social({
         provider: "google",
         callbackURL: "/",
       });
       if(!error){
+        toast.success('Sign Up success full')
          router.push("/");
       }
     };

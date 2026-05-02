@@ -74,7 +74,7 @@ const Hero = () => {
         ref={sunRef}
         className="absolute top-1/4 right-1/4 z-20 hidden lg:block opacity-70 pointer-events-none"
       >
-        <MdOutlineWbSunny className="text-8xl text-sun-yellow/40 blur-[1px]" />
+        {/* <MdOutlineWbSunny className="text-8xl text-sun-yellow/40 blur-[1px]" /> */}
       </div>
 
       <div className="relative z-10 container mx-auto px-6 h-full flex flex-col justify-center items-start">

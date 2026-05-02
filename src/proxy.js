@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from './lib/auth'
 import { headers } from 'next/headers'
+import { toast } from 'react-toastify'
  
 
 export async function proxy(request) {
@@ -11,7 +12,9 @@ export async function proxy(request) {
 
     if (!session){
         return NextResponse.redirect(new URL('/signin', request.url))
+        
     }
+    
 }
  
  

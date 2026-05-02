@@ -12,34 +12,65 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
+
 import { GrGoogle } from "react-icons/gr";
 import { toast } from "react-toastify";
 
+
 export default function SignInPage() {
+
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    const message = searchParams.get("message")
+
+    if (message === "login-required") {
+      toast.warning("Please login first")
+    }
+  }, [searchParams])
+
+  const router = useRouter();
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+    
+
     const { data, error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: "/",
+      
     });
     if (error) {
       toast.error(error.message || "Login failed");
+
     } else {
-      toast.success("Login Success");
       
+      
+      toast.success("Login Success");
+      router.push("/");
     }
     console.log({ data, error });
   };
 
   const handlGoogleSignIn = async () => {
-    await authClient.signIn.social({
+    const {data, error} = await authClient.signIn.social({
         provider: 'google'
     })
+    if (error) {
+      toast.error(error.message || "Login failed");
+
+    } else {
+      
+      
+      toast.success("Login Success");
+      router.push("/");
+    }
   }
 
 

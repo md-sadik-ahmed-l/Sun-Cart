@@ -1,15 +1,17 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaTwitter, FaPinterest } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter, FaPinterest, FaLinkedin, FaSun } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { GrGithub } from "react-icons/gr";
+import { MdOutlineWbSunny } from "react-icons/md";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <FaFacebook size={20} />, href: "#" },
-    { icon: <FaInstagram size={20} />, href: "#" },
-    { icon: <FaTwitter size={20} />, href: "#" },
-    { icon: <FaPinterest size={20} />, href: "#" },
+    { icon: <FaFacebook size={20} />, href: "https://www.facebook.com/Md.Sadik.Ahmed.L" },
+    { icon: <FaInstagram size={20} />, href: "https://www.instagram.com/md.sadik.ahmed.l/?hl=en" },
+    { icon: <FaLinkedin size={20} />, href: "https://www.linkedin.com/in/md-sadik-ahmed-l/" },
+    { icon: <GrGithub size={20} />, href: "https://github.com/md-sadik-ahmed-l" },
   ];
 
   return (
@@ -24,18 +26,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           
           <div className="space-y-8">
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/" className="flex items-center group">
               <motion.div
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 1 }}
               >
-                <Image
+                {/* <Image
                   src={"/logo.png"}
                   alt="logo"
                   width={40}
                   height={40}
                   className="invert brightness-0"
-                />
+                /> */}
+                <MdOutlineWbSunny className="text-3xl md:text-4xl text-orange-400"/>
               </motion.div>
               <h2 className="font-black text-4xl tracking-tight group-hover:text-sun-yellow transition-colors duration-300">
                 SunCart
@@ -50,7 +53,7 @@ const Footer = () => {
           <div className="space-y-8">
             <h4 className="text-xl font-bold text-white uppercase tracking-widest">Explore</h4>
             <ul className="space-y-4 text-gray-400 text-lg">
-              {["Home", "Products", "My Profile"].map((link) => (
+              {["Home", "Products", "Profile"].map((link) => (
                 <li key={link}>
                   <Link href={`/${link.toLowerCase().replace(" ", "")}`} className="hover:text-sun-yellow hover:translate-x-2 inline-block transition-all duration-300">
                     {link}
