@@ -62,6 +62,7 @@ function SignInContent() {
   };
 
   const handlGoogleSignIn = async () => {
+    // localStorage.setItem("social_login", "true")
     const {data, error} = await authClient.signIn.social({
         provider: 'google'
     })
@@ -71,8 +72,9 @@ function SignInContent() {
     } else {
       
       
-      toast.success("Login Success");
+      
       router.push("/");
+      toast.success("Login Success");
     }
   }
 

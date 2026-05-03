@@ -163,7 +163,6 @@ const Hero = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Navigation arrows */}
       <button 
         onClick={prevSlide}
         className="absolute left-6 md:left-10 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-black/20 backdrop-blur-xl border border-white/10 text-white hover:bg-sun-yellow hover:text-sun-dark transition-all group"
@@ -177,7 +176,7 @@ const Hero = () => {
         <FiChevronRight className="text-2xl md:text-3xl group-hover:translate-x-1 transition-transform" />
       </button>
 
-      {/* Slide Indicators */}
+      
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-6 z-30">
         {slides.map((_, idx) => (
           <button
@@ -193,7 +192,7 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Decorative Sun */}
+      
       <motion.div 
         animate={{ rotate: 360 }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -202,7 +201,7 @@ const Hero = () => {
          <MdOutlineWbSunny className="text-[400px] text-sun-yellow" />
       </motion.div>
       
-      {/* Scroll Indicator */}
+      
       <motion.div 
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}

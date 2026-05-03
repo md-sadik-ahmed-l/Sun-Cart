@@ -6,6 +6,7 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 
+
 const ProductsCard = ({ product, index }) => {
   return (
     <motion.div
@@ -53,6 +54,7 @@ const ProductsCard = ({ product, index }) => {
           </div>
 
           <Link href={`/products/${product.id}`} className="block w-full pt-2">
+
             <motion.div
               whileTap={{ scale: 0.95 }}
               initial={{ y: 0 }}
@@ -62,11 +64,14 @@ const ProductsCard = ({ product, index }) => {
                 View Details
               </Button>
             </motion.div>
+            
           </Link>
         </div>
       </Card>
     </motion.div>
+
   );
+
 };
 
 export default ProductsCard;

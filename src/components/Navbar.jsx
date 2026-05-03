@@ -6,6 +6,7 @@ import Link from "next/link";
 import { IoSearch, IoCartOutline, IoPersonOutline } from "react-icons/io5";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const userData = authClient.useSession();
@@ -13,6 +14,9 @@ const Navbar = () => {
 
   const handlSignOut = async () => {
     await authClient.signOut();
+    toast.warning("Log in your account")
+    window.location.href = "/signin"
+    
   };
 
   const navLinks = [

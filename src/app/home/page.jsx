@@ -13,6 +13,27 @@ const HomePage = async () => {
   } catch (error) {
     console.error("Failed to fetch products:", error);
   }
+
+  //   // 🔥 set a flag BEFORE redirect
+// localStorage.setItem("social_login", "true")
+// "use client"
+// import { useEffect } from "react"
+// import { toast } from "sonner"
+
+// export default function HomePage() {
+//   useEffect(() => {
+//     const isSocialLogin = localStorage.getItem("social_login")
+
+//     if (isSocialLogin) {
+//       toast.success("Login successful 🎉")
+
+//       // ✅ remove so it doesn't show again
+//       localStorage.removeItem("social_login")
+//     }
+//   }, [])
+
+//   return <div>Home Page</div>
+// }
   
   const popularProducts = products.slice(0, 3); // Showing 3 as per the image
 
